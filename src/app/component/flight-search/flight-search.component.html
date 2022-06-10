@@ -1,0 +1,42 @@
+<div class="container FlightBooking">
+    <form>
+    <div class="form-row">
+        
+            <label for="inputArrived">Origin :</label>
+            <input type="search" class="form-control" [(ngModel)]="OriginFilter" [ngModelOptions]="{standalone: true}">
+             <label for="inputArrived">Destination :</label>
+            <input type="search" class="form-control" [(ngModel)]="destinationFilter" [ngModelOptions]="{standalone: true}"> 
+    </div>
+</form>
+<div class="table-container">
+    <table class="table"style="text-align:center">
+        <thead>
+            <tr>
+                <th>Flight ID</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Date and Time</th>
+                <th>Fare</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+
+             <tr *ngFor="let f of FlightList$ | async | origins:OriginFilter | destination:destinationFilter">
+                
+                <td>{{f.fbS_Flight_Id}}</td>
+                <td>{{f.fbS_Flight_Origin }}</td>
+                <td>{{f.fbS_Flight_Destination }}</td>
+                <td>{{f.fbS_Flight_DateTime }}</td>
+                <td>{{f.fbS_Flight_Fare}}/-</td>
+                <td>
+                    <a routerLink="flight-booking" class="flight-booking">Booking</a>
+                </td>
+            </tr>   
+
+
+        </tbody>
+    </table>
+
+</div>

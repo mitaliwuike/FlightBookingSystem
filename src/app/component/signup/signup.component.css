@@ -1,0 +1,33 @@
+.card{
+    border: none;
+    width: 500px;
+    padding: 35px;
+    position:absolute;
+    top:15vh;
+    border-radius: 20px;
+    left: 30%;
+    background: hsla(205, 46%, 36%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 36%, 1) 0%,hsla(260, 29%, 36%, 1) 100%);
+}
+.card h1,h6{
+    color: #fff;
+}
+label{
+    color: #fff;
+}
+.background{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    background: hsla(205, 46%, 36%, 1);
+    background: linear-gradient(45deg, rgb(170, 233, 238) 0%,rgb(228, 145, 149) 100%);
+}
+span{
+    margin: 0;
+    padding: 0;
+}
+.close {
+    position: relative;
+    left: 67vh;
+}

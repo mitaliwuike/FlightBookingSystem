@@ -1,0 +1,42 @@
+<div class="Booking">
+    
+            <div class="card">
+                <div class="close">
+                    <button type="button" routerLink="" class="btn-close"  aria-label="Close"></button>
+                  </div>
+                <div class="text-center">
+                    <h1>Flight Booking</h1>
+                </div>
+                <form [formGroup]="BookingForm" (ngSubmit)="Booking()">
+                    <div class="mb-3">
+                        <label for="InputFlightId" class="form-label">Flight Id : </label>
+                        <input #FlightId formControlName="FlightId" type="number" class="form-control" id="InputFlightId">
+                        <span style="color: red;" *ngIf="FlightIdValidator && FlightIdValidator.invalid && FlightIdValidator.touched ">This field is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputFirstName" class="form-label">First Name : </label>
+                        <input #FirstName formControlName="FirstName" type="text" class="form-control" id="InputFirstName">
+                        <span style="color: red;" *ngIf="FirstValidator && FirstValidator.invalid && FirstValidator.touched ">This field is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputLastName" class="form-label">Last Name : </label>
+                        <input #LastName formControlName="LastName" type="text" class="form-control" id="InputLastName" >
+                        <span style="color: red;" *ngIf="LastNameValidator && LastNameValidator.invalid && LastNameValidator.touched ">This field is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Email : </label>
+                        <input #Email formControlName="Email" type="email" class="form-control" id="InputEmail">
+                        <span style="color: red;" *ngIf="EmailValidator && EmailValidator.invalid && EmailValidator.touched ">This field is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Contact no : </label>
+                        <input #Contact formControlName="Contact" type="tel" class="form-control" id="InputEmail">
+                        <span style="color: red;" *ngIf="ContactValidator && ContactValidator.invalid && ContactValidator.touched ">This field is required</span>
+                    </div>
+                    <button [disabled]="BookingForm.invalid" type="submit" class="btn btn-primary">Booking</button>
+                </form>
+
+            </div>
+
+       
+</div>

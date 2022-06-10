@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="close">
+          <button type="button" routerLink="" class="btn-close"  aria-label="Close"></button>
+        </div>
+
+          <div class="text-center">
+            <h1>Login</h1>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-3">
+              <label for="exampleInputUsername" class="form-label">Username</label>
+              <input formControlName="Username" type="text" class="form-control" id="exampleInputUsername"
+                aria-describedby="emailHelp">
+              <span style="color: red;" *ngIf="emailValidator && emailValidator.invalid && emailValidator.touched ">This
+                field is required</span>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1">
+              <span style="color: red;"
+                *ngIf="passwordValidator && passwordValidator.invalid && passwordValidator.touched ">This field is
+                required</span>
+            </div>
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">Login</button>
+          </form>
+          <a routerLink="/signup" style=" color: white;  margin-top: 10px;">Click here for sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

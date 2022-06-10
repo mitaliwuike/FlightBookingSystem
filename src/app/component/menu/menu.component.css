@@ -1,0 +1,12 @@
+.passanger-details,.flight-search{
+    padding: 8px 30px;
+    background-color: rgb(167, 145, 197);
+    text-decoration: none;
+    color: black;
+    font-size: 3vh;
+    font-weight: bold;
+}
+.show{
+    background-color: rgb(133, 133, 215);   
+}
+

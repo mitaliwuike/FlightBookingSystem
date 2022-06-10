@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="close">
+                    <button type="button" routerLink="" class="btn-close"  aria-label="Close"></button>
+                  </div>
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Name</label>
+                        <input #Name formControlName="Name" type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+                        <span style="color: red;" *ngIf="nameValidator && nameValidator.invalid && nameValidator.touched ">This field is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputUsername" class="form-label">Username</label>
+                        <input formControlName="Username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp">
+                        <span style="color: red;" *ngIf="emailValidator && emailValidator.invalid && emailValidator.touched ">This field is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1">
+                        <span style="color: red;" *ngIf="passwordValidator && passwordValidator.invalid && passwordValidator.touched ">This field is required</span>
+                    </div>
+                    <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+                <a routerLink="/login" style="color: #fff;margin-top: 10px;">Already Register</a>        
+
+            </div>
+
+        </div>
+    </div>
+</div>

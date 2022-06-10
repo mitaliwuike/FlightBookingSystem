@@ -1,0 +1,32 @@
+input[type=text]{
+    width: 30vh;
+    padding: 0px 15px;
+    height: 43px;
+    margin-left: 10px;
+    background-color: rgb(218, 176, 238);
+    font-size: 20px;
+}
+label{
+    font-size: 25px;
+    font-size: 200;
+    margin-left: 20px;
+}
+.passanger-details{
+    
+    padding: 20px;
+    background-color: rgb(133, 133, 215);   
+    margin: 0 86px;
+    margin-top: 6px;
+
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: rgb(167, 145, 197);
+    width: 20vh;
+    font-size: 25px;
+    font-weight:700;
+    margin-left: 20px;
+}

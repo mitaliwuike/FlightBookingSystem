@@ -1,0 +1,15 @@
+
+.Booking{
+margin: 20px 363px;
+}
+.card{
+    width: 500px;
+    padding: 20px 20px;
+    background: hsla(205, 46%, 36%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 36%, 1) 0%,hsla(260, 29%, 36%, 1) 100%);
+}
+.close {
+    position: relative;
+    left: 73vh;
+}
+
